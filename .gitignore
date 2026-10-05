@@ -1,0 +1,23 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Secrets
+.env
+
+# Generated vector stores
+chroma_store/
+
+# Jupyter autosaves
+.ipynb_checkpoints/
+
+# Personal health data
+2_health_analysis/blood_work.txt
+7_multimodal/blood_work.png
