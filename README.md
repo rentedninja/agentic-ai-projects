@@ -4,11 +4,21 @@ Two LLM applications built with LangChain, Groq and Streamlit.
 
 ## 1. AI Shopping Agent — `10_proj_Shopping_Agent/`
 
-A tool-calling agent that searches a product catalog, checks ratings, and places orders through natural conversation.
+A tool-calling agent that searches a product catalog, checks ratings, and places orders through natural conversation — and remembers each shopper's orders and preferences across sessions.
 
-- **Tools:** `search_products` (SQLite search with price/organic filters), `get_rating`, `checkout`, `describe_product_image` (shop by photo)
+![Shopping assistant landing page](docs/screenshots/shopping-landing.png)
+
+*Asking about past orders — the agent queries the order history and offers to reorder:*
+
+![Agent answering "what did I order before?"](docs/screenshots/shopping-order-history.png)
+
+- **Tools:** `search_products` (SQLite search with price/organic filters), `get_rating`, `checkout`, `describe_product_image` (shop by photo), `get_order_history`, `get_preferences`, `update_preferences`
 - **Agent:** LangChain `create_agent` with a system prompt defining browse → rate → confirm → order flows
-- **UI:** Streamlit chat with image upload
+- **Memory & personalization:**
+  - *Order history* — "what have I ordered before?" is answered from the `orders` table, with totals and one-step reorder
+  - *Lasting preferences* — "I always want organic" or "never over $20" is saved per user and applied automatically in future sessions
+  - The user ID is passed to tools through LangChain's runtime context, never by the LLM, so the model can't read or change another shopper's data
+- **UI:** Streamlit app with product cards and one-click ordering, aisle browsing, a shopper profile with saved preferences and recent orders, and photo search
 
 ```bash
 cd 10_proj_Shopping_Agent
