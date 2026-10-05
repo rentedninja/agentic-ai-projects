@@ -21,3 +21,15 @@ chroma_store/
 # Personal health data
 2_health_analysis/blood_work.txt
 7_multimodal/blood_work.png
+
+# Tutorial exercises kept local only
+/1_simple_llm_calling/
+/2_health_analysis/
+/3_vector_db/
+/4_rag_basics/
+/5_single_agent/
+/6_memory/
+/7_multimodal/
+/app.py
+/main.py
+/src/
