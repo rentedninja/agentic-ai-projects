@@ -1,7 +1,7 @@
 [project]
-name = "agentic-ai-crash-course"
+name = "agentic-ai-projects"
 version = "0.1.0"
-description = "Agentic AI crash course by Codebasics"
+description = "A tool-calling shopping agent and a telecom support RAG chatbot built with LangChain and Groq"
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [

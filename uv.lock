@@ -8,7 +8,7 @@ resolution-markers = [
 ]
 
 [[package]]
-name = "agentic-ai-crash-course"
+name = "agentic-ai-projects"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
